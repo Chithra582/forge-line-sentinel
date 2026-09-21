@@ -1,32 +1,57 @@
-<a href="https://qcadoo.com"><img src="https://cloud.githubusercontent.com/assets/513146/25782749/bc50ca98-3350-11e7-8837-64fde0f16d48.png" alt="qcadoo MES" /></a>
-![beautiful screenshot](https://cloud.githubusercontent.com/assets/513146/25784436/63e0b7c0-336d-11e7-8124-75f860e6f1f0.png)
-# qcadoo MES
+# Forge Line Sentinel
 
-qcadoo MES is an Internet application for production management targeted at small and medium companies.It combines the functions of large ERP systems, adapting it to the specific character of Small and Medium Companies.
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE.txt)
+[![Java](https://img.shields.io/badge/Java-8%2B-orange.svg)](https://www.oracle.com/java/)
+[![Maven](https://img.shields.io/badge/Build-Maven-C71A36.svg)](https://maven.apache.org/)
 
-## Quick start
+**Forge Line Sentinel** is a modular Manufacturing Execution System (MES) designed to optimize shop-floor operations, streamline production tracking, and connect manufacturing lines with enterprise planning workflows.
 
-Choose one of the following options:
+---
 
-1. Download the latest binary stable release from
-   [GitHub Releases](https://github.com/qcadoo/mes/releases/latest)
-2. Build qcadoo MES from sources
-   with [this instruction](https://qcadoo.atlassian.net/wiki/display/QCDMESDOC/Building+MES+from+source+code+-+tutorial)
+## 🚀 Key Modules & Capabilities
 
-## Community vs Commercial version
+- **Production Tracking & Counting**: Monitor active workstations, track run times, output counts, and workstation efficiency.
+- **Work Orders & Master Scheduling**: Schedule, execute, and monitor production orders with integrated Gantt planning and shift assignments.
+- **Material Flow & Inventory**: Real-time management of warehouse materials, inventory allocations, batch tracking, and delivery supplies.
+- **Genealogy & Quality Control**: Track material genealogy across assembly steps, record deviation causes, and ensure traceability.
+- **Cost & Norm Calculations**: Compute labor costs, material cost norms, and operation times to analyze and improve line profitability.
+- **CMMS & Maintenance**: Manage machine parts, maintenance routines, and minimize equipment downtime.
 
-qcadoo MES comes in two different versions:
-- Community version - the Open Source version from this repo
-- Commercial version - the version developed and sold by [Qcadoo Limited](https://qcadoo.com/en/)
+---
 
+## 🏗 Project Architecture
 
-Commercial version provides i.e.
-- full support
-- SaaS deployment
-- REST API for integration
-- ready integration modules with popular ERP software, Pipedrive, SCADA
-- additional features (like i.e. Gantt planning, warehouse material flow, maintenance planning module and others)
+Forge Line Sentinel uses a multi-module Maven structure:
 
-## Licensing
+- **`mes-application/`**: Web application runner and container configuration (`war`).
+- **`mes-plugins/`**: Modular feature plugins:
+  - `mes-plugins-orders`: Work order lifecycle and execution.
+  - `mes-plugins-production-counting`: Production logging, tracking, and progress metrics.
+  - `mes-plugins-material-flow`: Raw material, WIP, and finished goods movement.
+  - `mes-plugins-technologies`: Bill of Materials (BOM), operation routing, and process definitions.
+  - `mes-plugins-advanced-genealogy`: Traceability and component lineage.
+  - `mes-plugins-cmms-machine-parts`: Maintenance and equipment spare parts management.
 
-The code is available under the [GNU AGPLv3](LICENSE.txt).
+---
+
+## 🛠 Prerequisites
+
+- **Java JDK**: 8 or higher
+- **Maven**: 3.6+
+- **Database**: PostgreSQL / MySQL / HSQLDB
+
+---
+
+## 📦 Building from Source
+
+To build all plugins and the main application package:
+
+```bash
+mvn clean install -DskipTests
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the [GNU Affero General Public License v3 (AGPL-3.0)](LICENSE.txt).
