@@ -49,9 +49,3 @@ To build all plugins and the main application package:
 ```bash
 mvn clean install -DskipTests
 ```
-
----
-
-## 📄 License
-
-This project is licensed under the [GNU Affero General Public License v3 (AGPL-3.0)](LICENSE.txt).
