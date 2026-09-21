@@ -1,0 +1,15 @@
+name: genealogy-tracer
+description: Perform forward or backward traceability queries across component lots and assemblies.
+input_schema:
+  type: object
+  properties:
+    trace_id:
+      type: string
+      description: Serial number or batch lot number to trace.
+    direction:
+      type: string
+      enum: [forward, backward]
+      description: Trace direction (forward to assemblies, backward to raw suppliers).
+  required:
+    - trace_id
+    - direction

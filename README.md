@@ -3,8 +3,11 @@
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE.txt)
 [![Java](https://img.shields.io/badge/Java-8%2B-orange.svg)](https://www.oracle.com/java/)
 [![Maven](https://img.shields.io/badge/Build-Maven-C71A36.svg)](https://maven.apache.org/)
+[![HiDevs GitAgent Passport](https://img.shields.io/badge/HiDevs-GitAgent%20Passport-blueviolet?style=flat-square)](https://app.hidevs.xyz/passport/submit)
+[![OpenGAP](https://img.shields.io/badge/OpenGAP-v0.1.0-blue?style=flat-square)](https://github.com/open-gitagent/opengap)
+[![Agent](https://img.shields.io/badge/agent-forge--line--sentinel--agent-orange?style=flat-square)](agent.yaml)
 
-**Forge Line Sentinel** is a modular Manufacturing Execution System (MES) designed to optimize shop-floor operations, streamline production tracking, and connect manufacturing lines with enterprise planning workflows.
+**Forge Line Sentinel** is an autonomous, modular Manufacturing Execution System (MES) and shop-floor intelligence agent designed to optimize production tracking, work order scheduling, material genealogy, and predictive maintenance across industrial manufacturing lines.
 
 ---
 
@@ -49,3 +52,12 @@ To build all plugins and the main application package:
 ```bash
 mvn clean install -DskipTests
 ```
+
+---
+
+## 🛂 HiDevs GitAgent Passport Submission
+
+- **Portal**: [HiDevs GitAgent Passport](https://app.hidevs.xyz/passport/submit)
+- **Repository**: `Chithra582/forge-line-sentinel`
+- **Category**: **Manufacturing & supply chain**
+

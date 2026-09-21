@@ -1,0 +1,18 @@
+name: order-scheduler
+description: Optimize sequencing and resource allocation for queued work orders.
+input_schema:
+  type: object
+  properties:
+    work_orders:
+      type: array
+      items:
+        type: object
+      description: List of pending work orders with product code, quantity, and due date.
+    available_lines:
+      type: array
+      items:
+        type: string
+      description: Active production lines available for scheduling.
+  required:
+    - work_orders
+    - available_lines

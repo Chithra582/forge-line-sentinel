@@ -1,0 +1,13 @@
+name: workstation-tracker
+description: Track real-time workstation operational status, cycle counts, and OEE metrics.
+input_schema:
+  type: object
+  properties:
+    workstation_id:
+      type: string
+      description: Unique identifier of the shop-floor machine or workstation.
+    timeframe_minutes:
+      type: integer
+      description: Operational window in minutes for throughput evaluation.
+  required:
+    - workstation_id

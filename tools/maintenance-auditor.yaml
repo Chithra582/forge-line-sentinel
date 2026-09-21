@@ -1,0 +1,17 @@
+name: maintenance-auditor
+description: Evaluate equipment wear metrics and check preventative maintenance schedules.
+input_schema:
+  type: object
+  properties:
+    equipment_id:
+      type: string
+      description: Identifier for the machine or sub-assembly component.
+    current_operating_hours:
+      type: number
+      description: Total accumulated operational run hours.
+    part_cycle_count:
+      type: integer
+      description: Total mechanical cycles executed since last replacement.
+  required:
+    - equipment_id
+    - current_operating_hours
